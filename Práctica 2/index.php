@@ -142,6 +142,8 @@
            <?php
                 $enteroFrase = intval($frase);
                 echo $enteroFrase;
+                echo "<br>";
+                echo "La función intval funciona para convertir un string en un entero, en este caso al intentar convertir un string en int se obtiene un error y devuelve 0.";
                 
            ?>
         </div>
