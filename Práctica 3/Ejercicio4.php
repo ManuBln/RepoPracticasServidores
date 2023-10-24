@@ -7,18 +7,26 @@
 </head>
 <body>   
     
-    <?php
+<?php
 
-        $matriz = array(3, 1, 2, 0);
+$matriz = array(
+    array(3, 1),
+    array(2, 0)
+);
 
-        echo "Contenido de la matriz:<br>";
-        echo "(";
-        foreach ($matriz as $valores) {
-            echo $valores . " ";
-        }
-        echo ")";
 
-    ?>
+echo "Matriz 2x2: <br>";
+
+echo "<table>";
+foreach ($matriz as $fila) {
+    echo "<tr>";
+    foreach ($fila as $elemento) {
+        echo "<td>".$elemento."</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
+?>
 
     
 
