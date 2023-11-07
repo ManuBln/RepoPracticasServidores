@@ -1,0 +1,27 @@
+body {
+    background-image: url("Imagenes/fondo_index.jpg");
+    font-family: Arial, sans-serif;
+    background-size: cover;
+}
+
+.ruta{
+    color: white;
+}
+
+.contenedorBuscador {
+    margin-top: 5%;
+    text-align: center;
+    background-color: rgba(95, 91, 91, 0.8);
+    width: 15%;
+    margin-left: 42%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#contenedorCrear {
+    margin-top: 5%;
+    text-align: center;
+    background-color: rgba(95, 91, 91, 0.8);
+    width: 15%;
+    margin-left: 42%;
+    border-radius: 5px 5px 5px 5px;
+}

@@ -1,6 +1,6 @@
 /* Estilos generales para el cuerpo de la página */
 body {
-    background-image: url("../Imagenes/fondo_index.jpg");
+    background-image: url("Imagenes/fondo_index.jpg");
     font-family: Arial, sans-serif;
     background-size: cover;
 }
@@ -56,4 +56,10 @@ a {
 /* Estilos para el enlace de Bootstrap al pasar el ratón */
 a:hover {
     color: #0056b3;
+}
+
+.fallo{
+    color: white;
+    text-align: center;
+    margin-top: 2%;
 }

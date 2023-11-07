@@ -6,13 +6,16 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/Index.css">
+
+    
 
     <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="Index.css">
 
 </head>
 
 <body>
+    
 
     <?php
     if (isset($_POST['send'])) {
@@ -24,7 +27,7 @@
         if ($usuario === 'admin' && $contraseña === '1234') {
             header('Location: Pagina.php');
         } else {
-            echo 'Acceso denegado. Verifica tus credenciales.';
+            echo '<p class="fallo">Acceso denegado. Verifica tus credenciales.</p>';
         }
     }
     ?>
