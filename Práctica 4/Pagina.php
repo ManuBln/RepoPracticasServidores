@@ -12,9 +12,9 @@
 <body>
 
 
-
     <div id="contenedorRuta" class="container text-center mt-5">
         <?php
+        echo '<p class="ruta">Fecha: ' . date('Y-m-d H:i:s'). '</p>';
         echo '<p class="ruta">La ruta actual es la siguiente: ' . getcwd() . '</p>';
 
         ?>
@@ -68,7 +68,7 @@
         </form>
 
         <?php
-        
+
         if (isset($_POST['crear'])) {
             $crear = $_POST['crear'];
             $contenido = $_POST['contenido'];
