@@ -1,0 +1,3 @@
+La gran diferencia entre sesiones y cookies es que las sesiones se guardan en el servidor y las cookies se guardan en el dispositivo.
+En mi proyecto he usado las sesiones, ya que empece desde la practica anterior con las sesiones y se me ha hecho mas facil.
+En mi caso las sesiones se han guardado previamente con admin 1234  y  cliente1  5678.
