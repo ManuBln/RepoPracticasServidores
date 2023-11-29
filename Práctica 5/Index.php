@@ -15,25 +15,6 @@
 </head>
 
 <body>
-    
-
-    <?php
-    if (isset($_POST['send'])) {
-
-
-        $usuario = $_POST['user'];
-        $contraseña = $_POST['password'];
-       
-
-        if ($usuario === 'admin' && $contraseña === '1234' || $usuario === 'cliente1' && $contraseña === '5678') {
-            header('Location: Pagina.php');
-            
-        }else {
-            echo '<p class="fallo">Acceso denegado. Verifica tus credenciales.</p>';
-        }
-    }
-    ?>
-
 
     <div id="contenedor">
 
@@ -46,10 +27,42 @@
             <label for="contraseña">Contraseña</label><br>
             <input type="password" id="password" name="password" required><br><br>
 
-            <input type="submit" value="Send" name="send">
+            <input type="submit" value="send" name="send">
         </form>
 
     </div>
+    
+
+    <?php
+    session_start();
+    if (isset($_POST['send'])) {
+
+
+        $usuario = $_POST['user'];
+        $contraseña = $_POST['password'];
+       
+
+        if ($usuario === 'admin' && $contraseña === '1234') {
+            
+            
+            $_SESSION['user'] = $usuario;
+            $_SESSION['rol'] = 'admin';
+            header('Location: Pagina.php');
+            
+        }elseif($usuario === 'cliente1' && $contraseña === '5678'){
+            
+            $_SESSION['user'] = $usuario;
+            $_SESSION['rol'] = 'cliente';
+            header('Location: Pagina.php');
+
+        }
+        else {
+            echo '<p class="fallo">Acceso denegado. Verifica tus credenciales.</p>';
+            header('Location: Index.php');
+        }
+    }
+    ?>
+
 
 
 
