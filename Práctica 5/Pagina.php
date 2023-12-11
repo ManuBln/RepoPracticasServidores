@@ -11,12 +11,7 @@
 
 <body>
 
-    <?php
-    session_start();
 
-    if ($_SESSION['rol'] = 'admin' || $_SESSION['rol'] = 'cliente') {
-
-        ?>
 
 
 
@@ -59,7 +54,7 @@
 
 
         <?php
-        if ($_SESSION['rol'] = 'admin') {
+        if (!$_SESSION['rol'] = 'cliente1') {
 
             ?>
 
@@ -99,12 +94,12 @@
                 ?>
 
             </div>
-            <?php
+         <?php
 
         }
 
 
-        ?>
+         ?>
 
         <div class = " text-center">
             <form action="logout.php">
@@ -114,12 +109,7 @@
 
 
 
-        <?php
-    } else {
-        echo '<p class="fallo">Acceso denegado. Verifica tus credenciales.</p>';
-        header('Location: Index.php');
-    }
-    ?>
+
 
 
 

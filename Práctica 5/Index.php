@@ -20,7 +20,7 @@
 
         <h2 id="tituloIncio">Inicio de sesion</h2>
 
-        <form action="Pagina.php" method="post">
+        <form action="Index.php" method="post">
             <label for="usuario">Usuario:</label><br>
             <input type="text" id="user" name="user" required><br><br>
 
