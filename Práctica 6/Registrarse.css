@@ -1,0 +1,17 @@
+#formularioRegistro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    flex-direction: column;
+}
+label{
+    margin-top: 0.6%;
+}
+input{
+    margin-top: 0.4%;
+}
+
+#botonRegister{
+    margin-top: 0.6%;   
+}
