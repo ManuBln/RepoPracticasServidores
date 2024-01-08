@@ -1,5 +1,5 @@
 <?php
-include_once("conexion.php");
+include_once("consultas_y_conexion.php");
 
 if (isset($_POST["user"]) && isset($_POST["password"]) && isset($_POST["email"])) {
 
@@ -8,7 +8,6 @@ if (isset($_POST["user"]) && isset($_POST["password"]) && isset($_POST["email"])
     $email = $_POST["email"];
 
     Consultas::RegistrarUsuario($user, $password, $email);
-
+    header('Location: index.php');
 }
-
 ?>
