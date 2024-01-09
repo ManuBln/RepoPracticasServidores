@@ -29,19 +29,82 @@ $pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
     <style>
-         #formularios{
+        body {
+            background-image: url("Imagenes/pagina.jpeg");
+            background-size: cover;
+        }
+
+        button {
+            margin-top: 5%;
+        }
+
+        #formularios {
             display: flex;
             align-items: space;
             justify-content: center;
             margin: auto;
 
-           
-        } 
 
-        #formularioInsertarPokemon{
-            margin-right: 5%;
         }
-        
+
+        #formularioInsertarPokemon {
+            margin-right: 5%;
+            background-color: hsl(0, 0%, 100%, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        #formularioActualizarPokemon {
+            background-color: hsl(0, 0%, 100%, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 250px;
+            width: 100%;
+        }
+
+
+
+        /* Estilos para la tabla */
+        table {
+            margin-left: 10%;
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            color: #fff;
+            background-color: #007bff;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Estilos para las filas impares */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilos para los enlaces dentro de la tabla */
+        a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 
 
@@ -66,7 +129,7 @@ $pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <label for="user">Generación:</label><br>
                 <input type="text" id="generacion" name="generacion" required><br>
 
-                <button id="botonRegister" type="submit">Enviar</button>
+                <button id="botonRegister" class="btn btn-danger" type="submit">Enviar</button>
                 <p id="alertaPokemon"></p>
             </form>
 
@@ -88,12 +151,12 @@ $pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <label for="user">Generación:</label><br>
                 <input type="text" id="generacion" name="generacion" required><br>
 
-                <button id="botonRegister" type="submit">Actualizar</button>
+                <button id="botonRegister" class="btn btn-danger" type="submit">Actualizar</button>
                 <p id="alertaPokemon"></p>
             </form>
         </div>
 
-        <h2>Tabla de Pokémon</h2>
+        <h2 class="text-center mb-5 mt-2">Tabla de Pokémon</h2>
 
         <table>
 
@@ -135,9 +198,11 @@ $pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-        <form id="logout" action="logout.php">
-            <button id="logout" onclick="logout.php"></button>
-        </form>
+        <div class="container mt-5">
+            <form id="salir" class="text-center" action="logout.php">
+                <button type="submit" class="btn btn-danger">Cerrar Sesión</button>
+            </form>
+        </div>
 
 
     </main>
